@@ -1,0 +1,6 @@
+﻿$ cd /home/naie/vllm-v2-npu
+$ PYTHONPATH=/home/naie/vllm-v2-npu python -c "Engine.generate long latency harness"
+Using device: npu:0
+SINGLE tokens 256 ttft_ms 219.50558759272099 ttot_ms 12064.416203647852 decode_tps 21.61265781550145
+Model: /home/naie/huggingface/Qwen3-1.7B
+Prompt: Explain how continuous batching improves LLM serving throughput and latency in detail.

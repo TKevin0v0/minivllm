@@ -1,0 +1,8 @@
+# Base packages are provided by the Ascend image/virtual environment.
+# Install a torch_npu build matching the installed CANN and PyTorch versions.
+transformers>=4.45.0
+safetensors>=0.4.0
+huggingface_hub>=0.23.0
+tqdm>=4.66.0
+xxhash>=3.0.0
+numpy>=1.24.0

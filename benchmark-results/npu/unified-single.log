@@ -1,0 +1,6 @@
+$ cd /home/naie/vllm-v2-npu
+$ PYTHONPATH=/home/naie/vllm-v2-npu python -c "Engine.generate latency harness"
+Using device: npu:0
+tokens 32 ttft_ms 224.94323924418346 ttot_ms 1648.4781615436077 decode_tps 22.47925182492745
+Model: /home/naie/huggingface/Qwen3-1.7B
+Prompt: Hello, my name is

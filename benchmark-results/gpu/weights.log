@@ -1,0 +1,2 @@
+$ find /root /autodl-fs /autodl-pub /data /workspace -type f \( -name '*.safetensors' -o -name 'config.json' \) 2>/dev/null | head -200
+/root/.codex/config.json

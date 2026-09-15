@@ -1,0 +1,1 @@
+$ find /root/autodl-fs /root/autodl-pub /root/autodl-tmp -maxdepth 6 -type f -name config.json 2>/dev/null | head -100

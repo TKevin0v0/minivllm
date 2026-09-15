@@ -1,0 +1,10 @@
+$ cd /root/bench/vllm-v2-npu && PYTHONPATH=/root/bench/vllm-v2-npu /root/miniconda3/bin/python3.12 run.py --model /root/models/models/Qwen--Qwen3-1.7B/snapshots/master --device cuda --max-new-tokens 32 --prompt 'Hello, my name is'
+Traceback (most recent call last):
+  File "/root/bench/vllm-v2-npu/run.py", line 23, in <module>
+    from src.config import EngineConfig  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bench/vllm-v2-npu/src/__init__.py", line 3, in <module>
+    from .config import EngineConfig
+  File "/root/bench/vllm-v2-npu/src/config.py", line 8, in <module>
+    from transformers import AutoConfig, PretrainedConfig
+ModuleNotFoundError: No module named 'transformers'

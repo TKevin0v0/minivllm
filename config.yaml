@@ -1,0 +1,35 @@
+# ============================================================
+# vllm 统一配置文件（v2 — Continuous Batching）
+# 命令行参数会覆盖此处的默认值
+# ============================================================
+
+# --- 模型 ---
+model: "Qwen3-0.6B"
+
+# --- 推理参数 ---
+prompt: "Hello, my name is"
+max_new_tokens: 200
+temperature: 0.9
+top_p: 0.95
+top_k: 20
+
+# --- 引擎 ---
+dtype: "auto"
+device: "auto"  # auto / npu / cuda / cpu
+context_len: 2048
+
+# --- KV Cache ---
+block_size: 16
+prefix_backend: "hash"  # none / hash / radix
+
+# --- 调度器 (v2 新增) ---
+max_num_seqs: 8
+max_num_batched_tokens: 4096
+mix_prefill_decode: true
+
+# --- 批量推理示例 ---
+# batch_prompts:
+#   - "Hello, my name is"
+#   - "Once upon a time"
+#   - "The capital of France is"
+#   - "In machine learning,"

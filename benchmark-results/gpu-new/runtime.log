@@ -1,0 +1,6 @@
+$ find /root -type f -path '*/bin/python*' 2>/dev/null | head -50; find /opt /usr/local -type f -path '*/bin/python*' 2>/dev/null | head -50
+/root/miniconda3/bin/python3.12
+/root/miniconda3/bin/python3.12-config
+/root/miniconda3/pkgs/python-3.12.3-h996f2a0_1/bin/python3.12
+/root/miniconda3/pkgs/python-3.12.3-h996f2a0_1/bin/python3.12-config
+/opt/nvidia/nsight-compute/2025.3.1/host/target-linux-x64/python/bin/python

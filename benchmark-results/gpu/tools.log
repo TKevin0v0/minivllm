@@ -1,0 +1,3 @@
+$ which hf || true; which modelscope || true; /root/miniconda3/bin/python -m pip show huggingface_hub modelscope 2>/dev/null || true; df -h /root
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          30G  4.8G   26G  16% /

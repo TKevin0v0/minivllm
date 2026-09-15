@@ -1,0 +1,5 @@
+$ /root/miniconda3/bin/python3.12 /root/bench/stress.py
+Using device: cuda:0
+SINGLE tokens=256 ttft_ms=253.784 ttot_ms=9826.272 decode_tps=26.743
+BATCH requests=4 tokens=1024 latency_s=13.711 throughput_tps=74.682
+Loading weights:   0%|          | 0/2 [00:00<?, ?it/s]Loading weights:  50%|¨€¨€¨€¨€¨€     | 1/2 [00:02<00:02,  2.59s/it]Loading weights: 100%|¨€¨€¨€¨€¨€¨€¨€¨€¨€¨€| 2/2 [00:02<00:00,  1.18s/it]Loading weights: 100%|¨€¨€¨€¨€¨€¨€¨€¨€¨€¨€| 2/2 [00:02<00:00,  1.40s/it]

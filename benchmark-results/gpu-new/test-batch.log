@@ -1,0 +1,18 @@
+$ cd /root/bench/vllm-v2-npu && PYTHONPATH=/root/bench/vllm-v2-npu /root/miniconda3/bin/python3.12 run.py --model /root/models/models/Qwen--Qwen3-1.7B/snapshots/master --device cuda --max-new-tokens 32 --batch
+Loading /root/models/models/Qwen--Qwen3-1.7B/snapshots/master for continuous batching ...
+Using device: cuda:0
+
+[0] 'Hello, my name is'
+    â†?" Lillian, and I'm a 12-year-old girl who loves to read, play with my dog, and watch movies. I also love to play"
+
+[1] 'Once upon a time'
+    â†?', in a small village, there was a wise old man who loved to play with numbers. He once said, "The sum of the first n natural numbers'
+
+[2] 'The capital of France is'
+    â†?' Paris. The capital of the United States is Washington, D.C. The capital of the United Kingdom is London. The capital of the Russian Federation is Moscow.'
+
+[3] 'In machine learning,'
+    â†?" the concept of a loss function is fundamental. It quantifies how well a model's predictions match the actual data, guiding the optimization process to adjust the model's"
+
+4 requests, ~128 toks in 2.02s
+Loading weights:   0%|          | 0/2 [00:00<?, ?it/s]Loading weights:  50%|¨€¨€¨€¨€¨€     | 1/2 [00:02<00:02,  2.41s/it]Loading weights: 100%|¨€¨€¨€¨€¨€¨€¨€¨€¨€¨€| 2/2 [00:02<00:00,  1.22s/it]Loading weights: 100%|¨€¨€¨€¨€¨€¨€¨€¨€¨€¨€| 2/2 [00:02<00:00,  1.40s/it]

@@ -1,0 +1,12 @@
+$ ls -la /root/bench/vllm-v2-npu 2>/dev/null || true
+total 24
+drwxr-xr-x 6 root root  169 Sep 14 17:53 .
+drwxr-xr-x 3 root root   33 Sep 14 17:53 ..
+-rw-r--r-- 1 root root 3099 Sep 14 17:53 README.md
+-rw-r--r-- 1 root root  849 Sep 14 17:53 config.yaml
+drwxr-xr-x 3 root root  154 Sep 14 17:53 docs
+-rw-r--r-- 1 root root  253 Sep 14 17:53 requirements-npu.txt
+-rw-r--r-- 1 root root 4860 Sep 14 17:53 run.py
+drwxr-xr-x 6 root root 4096 Sep 14 17:53 src
+drwxr-xr-x 2 root root   34 Sep 14 17:53 tests
+drwxr-xr-x 2 root root  160 Sep 14 17:53 utils
