@@ -1,9 +1,3 @@
-# vllm-v2 — Continuous Batching
-
-> 在 v1（KV Cache + 前缀）之上加入多请求调度，引入"控制面 / 数据面 / 计算面"三面分离架构。
-
----
-
 ## 代码架构
 
 ```
@@ -28,22 +22,6 @@ vllm-v2/
 └── docs/                         # 设计文档
 ```
 
----
-
-## 相对 v1 新增
-
-| 新增能力 | 对应模块 | 说明 |
-|---------|---------|------|
-| Continuous Batching | `src/engine/scheduler.py` | waiting/running 队列，每步 schedule → run → postprocess |
-| Chunked Prefill | 同上 | 长 prompt 切块，与 decode 混合调度 |
-| PD 混跑 | 同上 | `mix_prefill_decode`：decode 优先 + 剩余 budget 给 prefill |
-| SamplingParams | `src/sampling_params.py` | 独立采样参数类（temperature / max_tokens / top_p） |
-| `generate_batch()` | `src/engine/engine.py` | 批量请求并行生成 |
-| 三面分离 | `scheduler.py` / `model_runner.py` / `layers/` | 控制面 / 数据面 / 计算面解耦 |
-| 序列管理 | `src/kv/sequence.py` | 多请求 Sequence 生命周期 |
-
----
-
 ## 快速开始
 
 ```bash
@@ -64,10 +42,3 @@ python -m bench.compare_chunked --model Qwen3-0.6B --budget 32 --long-prompt 512
 
 ---
 
-## 文档
-
-| 文档 | 说明 |
-|------|------|
-| [00-V2版本设计解释.md](docs/00-V2版本设计解释.md) | Continuous Batching 动机 |
-| [01-相比v1的增改.md](docs/01-相比v1的增改.md) | v1 → v2 逐个差异文件清单 |
-| [02-代码架构与三面分离.md](docs/02-代码架构与三面分离.md) | 控制面 / 数据面 / 计算面架构详解 |
