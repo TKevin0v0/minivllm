@@ -1,4 +1,0 @@
-$ /root/miniconda3/bin/python3.12 -m pip install transformers pyyaml huggingface_hub
-Looking in indexes: http://mirrors.aliyun.com/pypi/simple
-ERROR: Could not find a version that satisfies the requirement transformers (from versions: none)
-ERROR: No matching distribution found for transformers

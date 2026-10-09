@@ -1,0 +1,191 @@
+/* Markdown → PDF（Chrome + KaTeX） */
+@page {
+  size: A4;
+  margin: 18mm 16mm;
+}
+html {
+  font-size: 11pt;
+}
+header#title-block-header {
+  display: none;
+}
+body {
+  font-family: "Noto Sans CJK SC", "Noto Sans CJK", "Source Han Sans SC",
+    "WenQuanYi Micro Hei", "Segoe UI", sans-serif;
+  line-height: 1.55;
+  color: #1a1a1a;
+  max-width: 100%;
+}
+h1, h2, h3, h4 {
+  font-weight: 650;
+  line-height: 1.3;
+  page-break-after: avoid;
+}
+h1 { font-size: 1.55rem; margin-top: 0; }
+h2 {
+  font-size: 1.28rem;
+  margin-top: 1.4em;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.2em;
+}
+h3 { font-size: 1.1rem; margin-top: 1.15em; }
+p, li { orphans: 3; widows: 3; }
+
+/* —— 分点 / 列表：打印时 outside 圆点易被裁切，改为明确缩进 —— */
+ul, ol {
+  margin: 0.55em 0 0.85em;
+  padding-left: 1.75em;
+  list-style-position: outside;
+}
+ul {
+  list-style-type: disc;
+}
+ol {
+  list-style-type: decimal;
+}
+ul ul {
+  list-style-type: circle;
+  margin: 0.25em 0;
+}
+li {
+  margin: 0.28em 0;
+  padding-left: 0.15em;
+  line-height: 1.55;
+}
+li > p {
+  margin: 0.2em 0;
+}
+
+/* —— GitHub Alerts（[!NOTE] / [!IMPORTANT] …）—— */
+.md-alert {
+  margin: 0.95em 0;
+  padding: 0.65em 0.95em 0.75em;
+  border-left: 4px solid #888;
+  border-radius: 4px;
+  background: #f6f8fa;
+  page-break-inside: avoid;
+}
+.md-alert > :first-child { margin-top: 0; }
+.md-alert > :last-child { margin-bottom: 0; }
+.md-alert-title {
+  margin: 0 0 0.45em;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.md-alert-title strong {
+  font-weight: 750;
+}
+.md-alert p { margin: 0.35em 0; }
+.md-alert ul, .md-alert ol {
+  margin: 0.35em 0 0.5em;
+}
+
+.md-alert-note {
+  border-left-color: #0969da;
+  background: #ddf4ff;
+}
+.md-alert-note .md-alert-title { color: #0550ae; }
+
+.md-alert-tip {
+  border-left-color: #1a7f37;
+  background: #dafbe1;
+}
+.md-alert-tip .md-alert-title { color: #116329; }
+
+.md-alert-important {
+  border-left-color: #8250df;
+  background: #fbefff;
+}
+.md-alert-important .md-alert-title { color: #6639ba; }
+
+.md-alert-warning {
+  border-left-color: #bf8700;
+  background: #fff8c5;
+}
+.md-alert-warning .md-alert-title { color: #9a6700; }
+
+.md-alert-caution {
+  border-left-color: #cf222e;
+  background: #ffebe9;
+}
+.md-alert-caution .md-alert-title { color: #a40e26; }
+
+code {
+  font-family: "Noto Sans Mono CJK SC", "DejaVu Sans Mono", ui-monospace, monospace;
+  font-size: 0.92em;
+  background: #f3f3f3;
+  padding: 0.05em 0.3em;
+  border-radius: 3px;
+}
+pre {
+  font-family: "Noto Sans Mono CJK SC", "DejaVu Sans Mono", ui-monospace, monospace;
+  font-size: 0.9em;
+  background: #f4f4f4;
+  padding: 0.75em 1em;
+  overflow-x: auto;
+  border-radius: 4px;
+  page-break-inside: avoid;
+}
+pre code {
+  background: transparent;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.9em auto;
+  page-break-inside: avoid;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+  font-size: 0.92em;
+  page-break-inside: avoid;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.35em 0.55em;
+  text-align: left;
+}
+th { background: #f0f0f0; }
+a { color: #0645ad; text-decoration: none; }
+
+/* —— KaTeX 公式 —— */
+.katex {
+  font-size: 1.05em;
+}
+.katex-display {
+  margin: 0.95em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  page-break-inside: avoid;
+}
+span.math.inline {
+  white-space: nowrap;
+}
+span.math.display,
+div.math.display {
+  display: block;
+  text-align: center;
+  margin: 0.95em 0;
+  page-break-inside: avoid;
+}
+.math {
+  page-break-inside: avoid;
+}
+
+/* —— MathML（无 KaTeX 时的离线回退）—— */
+math {
+  font-family: "STIX Two Math", "Latin Modern Math", "Cambria Math", serif;
+}
+math[display="block"] {
+  display: block;
+  text-align: center;
+  margin: 0.95em 0;
+  page-break-inside: avoid;
+}
+math[display="inline"] {
+  padding: 0 0.05em;
+}

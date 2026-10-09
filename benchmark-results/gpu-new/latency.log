@@ -1,4 +1,0 @@
-$ /root/miniconda3/bin/python3.12 /root/bench/latency.py
-Using device: cuda:0
-tokens=32 ttft_ms=248.919 ttot_ms=1444.903 decode_tps=26.756
-Loading weights:   0%|          | 0/2 [00:00<?, ?it/s]Loading weights:  50%|¨€¨€¨€¨€¨€     | 1/2 [00:02<00:02,  2.12s/it]Loading weights: 100%|¨€¨€¨€¨€¨€¨€¨€¨€¨€¨€| 2/2 [00:02<00:00,  1.01it/s]Loading weights: 100%|¨€¨€¨€¨€¨€¨€¨€¨€¨€¨€| 2/2 [00:02<00:00,  1.16s/it]

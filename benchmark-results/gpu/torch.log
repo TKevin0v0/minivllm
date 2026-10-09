@@ -1,2 +1,0 @@
-$ /root/miniconda3/bin/python -c 'import torch; print(torch.__version__, torch.cuda.is_available(), torch.cuda.device_count())'
-2.12.1+cu130 True 1

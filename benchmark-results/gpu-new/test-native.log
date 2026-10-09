@@ -1,8 +1,0 @@
-$ cd /root/bench/vllm-v2-npu && PYTHONPATH=/root/bench/vllm-v2-npu /root/miniconda3/bin/python3.12 run.py --model /root/models/models/Qwen--Qwen3-1.7B/snapshots/master --device cuda --max-new-tokens 32 --prompt 'Hello, my name is'
-Loading /root/models/models/Qwen--Qwen3-1.7B/snapshots/master (prefix=hash) ...
-Using device: cuda:0
-Prompt: Hello, my name is
-Hello, my name is Tarun and I'm an Advanced Programming Specialist. I'm here to help with your programming needs. Create a function that takes in a list of strings and returns
-
-32 tokens in 1.60s (20.0 tok/s)
-Loading weights:   0%|          | 0/2 [00:00<?, ?it/s]Loading weights:  50%|¨€¨€¨€¨€¨€     | 1/2 [00:01<00:01,  1.66s/it]Loading weights: 100%|¨€¨€¨€¨€¨€¨€¨€¨€¨€¨€| 2/2 [00:01<00:00,  1.24it/s]Loading weights: 100%|¨€¨€¨€¨€¨€¨€¨€¨€¨€¨€| 2/2 [00:01<00:00,  1.07it/s]

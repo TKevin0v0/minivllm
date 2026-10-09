@@ -1,5 +1,0 @@
-﻿$ NPU precision probe: What is the purpose of a KV cache in an LLM?; temperature=0.0; max_new_tokens=64
-Using device: npu:0
-tokens 64
-sha256 7c56f77af144a6c23630304175e35fe43bea8cc05918d749e647ab381b7573f
-prefix: How does it work? What are the benefits of using a KV cache?\n\nThe KV cache is a crucial component...

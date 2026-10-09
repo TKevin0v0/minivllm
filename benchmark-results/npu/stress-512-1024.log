@@ -1,8 +1,0 @@
-﻿$ NPU 512 batch interactive command: python run.py --model /home/naie/huggingface/Qwen3-1.7B --device npu --max-new-tokens 512 --batch
-Using device: npu:0
-4 requests, ~2048 toks in 43.68s
-Computed throughput: 2048 / 43.68 = 46.89 tok/s
-$ NPU 1024 batch interactive command: python run.py --model /home/naie/huggingface/Qwen3-1.7B --device npu --max-new-tokens 1024 --batch
-Using device: npu:0
-4 requests, ~4096 toks in 95.53s
-Computed throughput: 4096 / 95.53 = 42.87 tok/s

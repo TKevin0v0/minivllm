@@ -1,4 +1,0 @@
-$ cd /home/naie/vllm-v2-npu
-$ PYTHONPATH=/home/naie/vllm-v2-npu python run.py --model /home/naie/huggingface/Qwen3-1.7B --device npu --max-new-tokens 32 --batch
-Using device: npu:0
-4 requests, ~128 toks in 2.48s
